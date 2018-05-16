@@ -26,7 +26,7 @@
  * use or other dealings in this Software without prior written
  * authorization.
  */
-
+//
 int main (string[] args) {
 	var app = new Gtk.Application ("org.gnome.Designtablets", ApplicationFlags.FLAGS_NONE);
 	app.activate.connect (() => {

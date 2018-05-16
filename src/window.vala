@@ -26,7 +26,7 @@
  * use or other dealings in this Software without prior written
  * authorization.
  */
-
+//
 namespace Designtablets {
 	[GtkTemplate (ui = "/org/gnome/Designtablets/window.ui")]
 	public class Window : Gtk.ApplicationWindow {
