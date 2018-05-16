@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="designtablets">
+	<schema id="org.gnome.Designtablets" path="/org/gnome/Designtablets/">
+	</schema>
+</schemalist>

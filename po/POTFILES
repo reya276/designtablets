@@ -1,0 +1,9 @@
+data/org.gnome.Designtablets.desktop.in
+data/org.gnome.Designtablets.appdata.xml.in
+data/org.gnome.Designtablets.gschema.xml
+src/window.ui
+
+src/main.vala
+src/window.vala
+
+

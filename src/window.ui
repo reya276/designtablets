@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <template class="DesigntabletsWindow" parent="GtkApplicationWindow">
+    <property name="default-width">600</property>
+    <property name="default-height">510</property>
+    <property name="window_position">center</property>
+    <!-- Main Application Box Start -->
+    <child>
+        <object class="GtkBox" id="mainbox">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="orientation">vertical</property>
+            <!-- <child>
+              <object class="GtkHeaderBar" id="header_bar">
+                <property name="visible">true</property>
+                <property name="show-close-button">true</property>
+                <property name="title">Design Tablets</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child> -->
+            <!-- Tablet Select List Grid Start -->
+            <child>
+              <object class="GtkGrid" id="tabletselect_grid">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="halign">center</property>
+                <property name="margin_top">10</property>
+                <property name="margin_bottom">10</property>
+                <!-- Tablet Select List Label Start -->
+                <child>
+                  <object class="GtkLabel" id="seltablet_label">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="margin_left">9</property>
+                    <property name="margin_right">5</property>
+                    <property name="label" translatable="yes">Select Tablet:</property>
+                    <property name="track_visited_links">False</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">0</property>
+                  </packing>
+                </child>
+                <!-- Tablet Select List Label End -->
+                <!-- Tablet Select List Start -->
+                <child>
+                  <object class="GtkComboBoxText" id="seltablet_list">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="has_default">True</property>
+                    <property name="button_sensitivity">on</property>
+                    <property name="active_id">0</property>
+                    <items>
+                      <item id="0" translatable="yes">No Tablet Selected</item>
+                      <item id="1" translatable="yes">Huion 540</item>
+                      <item id="2" translatable="yes">Huion 580 (Turcom TS-6580B)</item>
+                      <item id="3" translatable="yes">Huion H420 (osu! tablet)</item>
+                      <item id="4" translatable="yes">Huion H610 (Monoprice 10 x 6)</item>
+                      <item id="5" translatable="yes">Huion H690</item>
+                      <item id="6" translatable="yes">Huion K26 (Huion P608N)</item>
+                      <item id="7" translatable="yes">Huion K58</item>
+                      <item id="8" translatable="yes">Huion W58 (Huion W58L)</item>
+                      <item id="9" translatable="yes">Genius EasyPen 340</item>
+                      <item id="10" translatable="yes">Genius EasyPen M406</item>
+                      <item id="11" translatable="yes">Genius EasyPen M406W</item>
+                      <item id="12" translatable="yes">Genius EasyPen M406XE</item>
+                      <item id="13" translatable="yes">Genius EasyPen M506</item>
+                      <item id="14" translatable="yes">Genius EasyPen M610X</item>
+                      <item id="15" translatable="yes">Genius EasyPen i405X</item>
+                      <item id="16" translatable="yes">Genius MousePen M508WX</item>
+                      <item id="17" translatable="yes">Genius MousePen M508X</item>
+                      <item id="18" translatable="yes">Genius MousePen i608X</item>
+                      <item id="19" translatable="yes">Genius MousePen i608X</item>
+                      <item id="20" translatable="yes">Genius PenSketch M912</item>
+                      <item id="21" translatable="yes">Zeniq PT-1001 (Leogics PT-1001)</item>
+                      <item id="22" translatable="yes">Ugee G3</item>
+                      <item id="23" translatable="yes">Ugee SP1001 (Yiynova UC-Logic SP-1001)</item>
+                      <item id="24" translatable="yes">Genius PenSketch 12x9 (PF1209)</item>
+                      <item id="25" translatable="yes">Monoprice 12x9 Inches Graphic (PF1209)</item>
+                      <item id="26" translatable="yes">Adesso CT-12000A (PF1209)</item>
+                      <item id="27" translatable="yes">Iball Design Tablet (PF1209)</item>
+                      <item id="28" translatable="yes">Genius EasyPen M610</item>
+                      <item id="29" translatable="yes">Monoprice MP1060-HA60</item>
+                      <item id="30" translatable="yes">Aiptek HyperPen 10000U</item>
+                      <item id="31" translatable="yes">Monoprice 10X6 (WP1062)</item>
+                      <item id="32" translatable="yes">Genius EasyPen M610</item>
+                      <item id="33" translatable="yes">Genius WizardPen 4x3 (WP4030U)</item>
+                      <item id="34" translatable="yes">Aquils L1 (WP4030U)</item>
+                      <item id="35" translatable="yes">Iball Pen Tablet 4030U</item>
+                      <item id="36" translatable="yes">Genius EasyPen i405</item>
+                      <item id="37" translatable="yes">Genius MousePen i608</item>
+                      <item id="38" translatable="yes">Ugee M540</item>
+                      <item id="39" translatable="yes">Genius MousePen M508W</item>
+                      <item id="40" translatable="yes">UGTizer GT1060</item>
+                      <item id="41" translatable="yes">Ugee 1000L</item>
+                      <item id="42" translatable="yes">Ugee 2150</item>
+                      <item id="43" translatable="yes">Ugee M708</item>
+                      <item id="43" translatable="yes">Signotec Delta PD 10.1</item>
+                      <item id="44" translatable="yes">Genius G-Pen M609 (M609X)</item>
+                      <item id="45" translatable="yes">Genius G-Pen M712 (M712X)</item>
+                      <item id="46" translatable="yes">Genius G-Pen F509</item>
+                      <item id="47" translatable="yes">Yiynova MSP19</item>
+                      <item id="48" translatable="yes">Aiptek HyperPen Mini</item>
+                      <item id="49" translatable="yes">VisTablet Muse</item>
+                      <item id="50" translatable="yes">Genius G-Pen F610</item>
+                      <item id="51" translatable="yes">Genius G-Pen F350</item>
+                      <item id="52" translatable="yes">Trust eBrush Widescreen Tablet</item>
+                      <item id="53" translatable="yes">Yiynova DP10U (DP10U+)</item>
+                      <item id="54" translatable="yes">Yiynova MSP19U (MSP19U+)</item>
+                      <item id="55" translatable="yes">Yiynova MVP10U (IPS)</item>
+                      <item id="56" translatable="yes">Yiynova MVP10UHD+IPS</item>
+                      <item id="57" translatable="yes">Yiynova MVP22U+</item>
+                    </items>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">0</property>
+                  </packing>
+                </child>
+                <!-- Tablet Select List End -->
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <!-- Tablet Select List Grid End -->
+            <!-- Default Tablet image -->
+            <child>
+              <object class="GtkGrid" id="imagegrid">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="halign">center</property>
+                <property name="margin_top">14</property>
+                <property name="row_homogeneous">True</property>
+                <property name="column_homogeneous">True</property>
+                <child>
+                  <object class="GtkImage" id="default_image">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="pixbuf">src/tablet_default.svg</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">0</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <!-- Default Tablet image End-->
+            <!-- Main Application Grid Start -->
+            <child>
+              <object class="GtkGrid" id="maingrid">
+            	<property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="halign">center</property>
+                <property name="margin_top">14</property>
+                <!-- PenFunction Settings Frame Start -->
+                <child>
+                    <object class="GtkFrame" id="penfunc_settings_frame">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="margin_left">12</property>
+                        <property name="margin_right">12</property>
+                        <property name="margin_top">10</property>
+                        <property name="margin_bottom">10</property>
+                        <property name="label_xalign">0</property>
+                        <property name="shadow_type">out</property>
+                        <child>
+                            <object class="GtkGrid" id="penfunc_grid">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <child>
+                                    <object class="GtkGrid" id="pengrid">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">False</property>
+                                        <child>
+                                            <object class="GtkImage" id="tabletprop_img">
+                                                <property name="visible">True</property>
+                                                <property name="can_focus">False</property>
+                                                <property name="margin_left">40</property>
+                                                <property name="margin_right">40</property>
+                                                <property name="margin_top">16</property>
+                                                <property name="margin_bottom">16</property>
+                                                <property name="pixbuf">pen_img.png</property>
+                                            </object>
+                                            <packing>
+                                                <property name="left_attach">0</property>
+                                                <property name="top_attach">0</property>
+                                            </packing>
+                                        </child>
+                                        <child>
+                                            <object class="GtkGrid" id="penbuttons_grid">
+                                                <property name="visible">True</property>
+                                                <property name="can_focus">False</property>
+                                                <child>
+                                                    <object class="GtkComboBoxText" id="tabletprop_button1">
+                                                        <property name="visible">True</property>
+                                                        <property name="can_focus">False</property>
+                                                        <property name="margin_top">46</property>
+                                                        <property name="margin_bottom">32</property>
+                                                        <property name="active_id">1</property>
+                                                        <items>
+                                                          <item id="1" translatable="yes">No Action</item>
+                                                          <item id="2" translatable="yes">Right Click</item>
+                                                          <item id="3" translatable="yes">Middle Click</item>
+                                                          <item id="4" translatable="yes">Pen/Eraser Toggle</item>
+                                                          <item id="5" translatable="yes">Function Key</item>
+                                                        </items>
+                                                    </object>
+                                                    <packing>
+                                                        <property name="left_attach">0</property>
+                                                        <property name="top_attach">0</property>
+                                                    </packing>
+                                                </child>
+                                                <child>
+                                                  <object class="GtkComboBoxText" id="tabletprop_button2">
+                                                    <property name="visible">True</property>
+                                                    <property name="can_focus">False</property>
+                                                    <property name="active_id">1</property>
+                                                    <items>
+                                                      <item id="1" translatable="yes">Left Click</item>
+                                                      <item id="2" translatable="yes">Middle Click</item>
+                                                      <item id="3" translatable="yes">Right Click</item>
+                                                      <item id="4" translatable="yes">Function Key</item>
+                                                      <item id="5" translatable="yes">Pen/Eraser Toggle</item>
+                                                    </items>
+                                                  </object>
+                                                  <packing>
+                                                    <property name="left_attach">0</property>
+                                                    <property name="top_attach">1</property>
+                                                  </packing>
+                                                </child>
+                                            </object>
+                                            <packing>
+                                                <property name="left_attach">1</property>
+                                                <property name="top_attach">0</property>
+                                            </packing>
+                                        </child>
+                                    </object>
+                                    <packing>
+                                        <property name="left_attach">0</property>
+                                        <property name="top_attach">0</property>
+                                    </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkGrid" id="penclicksens_grid">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="halign">center</property>
+                                    <property name="valign">center</property>
+                                    <property name="margin_left">50</property>
+                                    <property name="margin_right">20</property>
+                                    <property name="margin_top">10</property>
+                                    <property name="margin_bottom">10</property>
+                                    <child>
+                                      <object class="GtkScaleButton" id="tabletprop_clicksens">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">True</property>
+                                        <property name="margin_left">20</property>
+                                        <property name="margin_right">20</property>
+                                        <property name="margin_top">10</property>
+                                        <property name="margin_bottom">10</property>
+                                        <property name="size">button</property>
+                                        <child internal-child="plus_button">
+                                          <object class="GtkButton">
+                                            <property name="label" translatable="yes">Heavy</property>
+                                            <property name="can_focus">True</property>
+                                            <property name="receives_default">True</property>
+                                            <property name="halign">center</property>
+                                            <property name="valign">center</property>
+                                            <property name="relief">none</property>
+                                          </object>
+                                        </child>
+                                        <child internal-child="minus_button">
+                                          <object class="GtkButton">
+                                            <property name="label" translatable="yes">Light</property>
+                                            <property name="can_focus">True</property>
+                                            <property name="receives_default">True</property>
+                                            <property name="halign">center</property>
+                                            <property name="valign">center</property>
+                                            <property name="relief">none</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                      <packing>
+                                        <property name="left_attach">0</property>
+                                        <property name="top_attach">1</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkScaleButton" id="tabletprop_clicktime">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="focus_on_click">False</property>
+                                        <property name="receives_default">True</property>
+                                        <property name="margin_left">20</property>
+                                        <property name="margin_right">20</property>
+                                        <property name="margin_top">10</property>
+                                        <property name="margin_bottom">10</property>
+                                        <property name="relief">none</property>
+                                        <property name="orientation">vertical</property>
+                                        <child internal-child="plus_button">
+                                          <object class="GtkButton">
+                                            <property name="label" translatable="yes">Fast</property>
+                                            <property name="can_focus">True</property>
+                                            <property name="receives_default">True</property>
+                                            <property name="halign">center</property>
+                                            <property name="valign">center</property>
+                                            <property name="relief">none</property>
+                                          </object>
+                                        </child>
+                                        <child internal-child="minus_button">
+                                          <object class="GtkButton">
+                                            <property name="label" translatable="yes">Slow</property>
+                                            <property name="can_focus">True</property>
+                                            <property name="receives_default">True</property>
+                                            <property name="halign">center</property>
+                                            <property name="valign">center</property>
+                                            <property name="relief">none</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                      <packing>
+                                        <property name="left_attach">0</property>
+                                        <property name="top_attach">3</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="clicksens_label">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">False</property>
+                                        <property name="label" translatable="yes">Click Sensitivity</property>
+                                      </object>
+                                      <packing>
+                                        <property name="left_attach">0</property>
+                                        <property name="top_attach">0</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="doubleclick_label">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">False</property>
+                                        <property name="label" translatable="yes">Double Click Time</property>
+                                      </object>
+                                      <packing>
+                                        <property name="left_attach">0</property>
+                                        <property name="top_attach">2</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton" id="penclicksens_default_bt">
+                                        <property name="label" translatable="yes">Default</property>
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">True</property>
+                                      </object>
+                                      <packing>
+                                        <property name="left_attach">0</property>
+                                        <property name="top_attach">4</property>
+                                      </packing>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">0</property>
+                                  </packing>
+                                </child>
+                                <!-- TabletScreenGrid Start -->
+                                <child>
+                                  <object class="GtkFrame" id="tabletscreen_grid">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="margin_left">10</property>
+                                    <property name="margin_right">10</property>
+                                    <property name="margin_top">10</property>
+                                    <property name="margin_bottom">10</property>
+                                    <property name="label_xalign">0</property>
+                                    <property name="shadow_type">out</property>
+                                    <child>
+                                      <object class="GtkAlignment">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">False</property>
+                                        <property name="left_padding">12</property>
+                                        <child>
+                                          <object class="GtkGrid">
+                                            <property name="visible">True</property>
+                                            <property name="can_focus">False</property>
+                                            <child>
+                                              <object class="GtkGrid">
+                                                <property name="visible">True</property>
+                                                <property name="can_focus">False</property>
+                                                <property name="halign">center</property>
+                                                <child>
+                                                  <object class="GtkComboBoxText" id="tabletprop_monitor_list">
+                                                    <property name="visible">True</property>
+                                                    <property name="can_focus">False</property>
+                                                    <property name="active_id">1</property>
+                                                    <items>
+                                                      <item id="1" translatable="yes">Monitor1</item>
+                                                      <item id="2" translatable="yes">Monitor2</item>
+                                                      <item id="3" translatable="yes">Monitor3</item>
+                                                    </items>
+                                                  </object>
+                                                  <packing>
+                                                    <property name="left_attach">0</property>
+                                                    <property name="top_attach">0</property>
+                                                  </packing>
+                                                </child>
+                                                <child>
+                                                  <object class="GtkButton" id="tabletprop_updatescreen_bt">
+                                                    <property name="label" translatable="yes">Update Screen</property>
+                                                    <property name="visible">True</property>
+                                                    <property name="can_focus">True</property>
+                                                    <property name="receives_default">True</property>
+                                                    <property name="margin_left">20</property>
+                                                    <property name="margin_right">20</property>
+                                                    <signal name="activate" handler="update_screen" swapped="no"/>
+                                                  </object>
+                                                  <packing>
+                                                    <property name="left_attach">1</property>
+                                                    <property name="top_attach">0</property>
+                                                  </packing>
+                                                </child>
+                                              </object>
+                                              <packing>
+                                                <property name="left_attach">0</property>
+                                                <property name="top_attach">0</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <object class="GtkGrid">
+                                                <property name="visible">True</property>
+                                                <property name="can_focus">False</property>
+                                                <property name="margin_top">10</property>
+                                                <child>
+                                                  <object class="GtkLabel" id="tabletscreen_label1">
+                                                    <property name="visible">True</property>
+                                                    <property name="can_focus">False</property>
+                                                    <property name="label" translatable="yes">X:</property>
+                                                  </object>
+                                                  <packing>
+                                                    <property name="left_attach">0</property>
+                                                    <property name="top_attach">0</property>
+                                                  </packing>
+                                                </child>
+                                                <child>
+                                                  <object class="GtkEntry" id="tabletscreen_entry1">
+                                                    <property name="visible">True</property>
+                                                    <property name="can_focus">True</property>
+                                                    <property name="halign">start</property>
+                                                    <property name="valign">center</property>
+                                                    <property name="margin_left">5</property>
+                                                    <property name="margin_right">5</property>
+                                                    <property name="editable">False</property>
+                                                    <property name="width_chars">5</property>
+                                                    <property name="input_purpose">number</property>
+                                                  </object>
+                                                  <packing>
+                                                    <property name="left_attach">1</property>
+                                                    <property name="top_attach">0</property>
+                                                  </packing>
+                                                </child>
+                                                <child>
+                                                  <object class="GtkLabel" id="tabletscreen_label2">
+                                                    <property name="visible">True</property>
+                                                    <property name="can_focus">False</property>
+                                                    <property name="label" translatable="yes">Y:</property>
+                                                  </object>
+                                                  <packing>
+                                                    <property name="left_attach">2</property>
+                                                    <property name="top_attach">0</property>
+                                                  </packing>
+                                                </child>
+                                                <child>
+                                                  <object class="GtkEntry" id="tabletscreen_entry2">
+                                                    <property name="visible">True</property>
+                                                    <property name="can_focus">True</property>
+                                                    <property name="margin_left">5</property>
+                                                    <property name="margin_right">5</property>
+                                                    <property name="width_chars">5</property>
+                                                  </object>
+                                                  <packing>
+                                                    <property name="left_attach">3</property>
+                                                    <property name="top_attach">0</property>
+                                                  </packing>
+                                                </child>
+                                                <child>
+                                                  <object class="GtkLabel" id="tabletscreen_label3">
+                                                    <property name="visible">True</property>
+                                                    <property name="can_focus">False</property>
+                                                    <property name="label" translatable="yes">Width:</property>
+                                                  </object>
+                                                  <packing>
+                                                    <property name="left_attach">4</property>
+                                                    <property name="top_attach">0</property>
+                                                  </packing>
+                                                </child>
+                                                <child>
+                                                  <object class="GtkEntry" id="tabletscreen_entry3">
+                                                    <property name="visible">True</property>
+                                                    <property name="can_focus">True</property>
+                                                    <property name="margin_left">5</property>
+                                                    <property name="margin_right">5</property>
+                                                    <property name="width_chars">5</property>
+                                                  </object>
+                                                  <packing>
+                                                    <property name="left_attach">5</property>
+                                                    <property name="top_attach">0</property>
+                                                  </packing>
+                                                </child>
+                                                <child>
+                                                  <object class="GtkLabel" id="tabletscreen_label4">
+                                                    <property name="visible">True</property>
+                                                    <property name="can_focus">False</property>
+                                                    <property name="label" translatable="yes">Height:</property>
+                                                  </object>
+                                                  <packing>
+                                                    <property name="left_attach">6</property>
+                                                    <property name="top_attach">0</property>
+                                                  </packing>
+                                                </child>
+                                                <child>
+                                                  <object class="GtkEntry" id="tabletscreen_entry4">
+                                                    <property name="visible">True</property>
+                                                    <property name="can_focus">True</property>
+                                                    <property name="margin_left">5</property>
+                                                    <property name="margin_right">5</property>
+                                                    <property name="width_chars">5</property>
+                                                  </object>
+                                                  <packing>
+                                                    <property name="left_attach">7</property>
+                                                    <property name="top_attach">0</property>
+                                                  </packing>
+                                                </child>
+                                              </object>
+                                              <packing>
+                                                <property name="left_attach">0</property>
+                                                <property name="top_attach">2</property>
+                                              </packing>
+                                            </child>
+                                            <child>
+                                              <object class="GtkEventBox" id="tabletscreen_show">
+                                                <property name="visible">True</property>
+                                                <property name="can_focus">False</property>
+                                                <child>
+                                                  <placeholder/>
+                                                </child>
+                                              </object>
+                                              <packing>
+                                                <property name="left_attach">0</property>
+                                                <property name="top_attach">1</property>
+                                              </packing>
+                                            </child>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                    <child type="label">
+                                      <object class="GtkLabel">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">False</property>
+                                        <property name="margin_left">12</property>
+                                        <property name="margin_right">12</property>
+                                        <property name="margin_top">10</property>
+                                        <property name="margin_bottom">10</property>
+                                        <property name="label" translatable="yes">Current Screen</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">1</property>
+                                  </packing>
+                                </child>
+                                <!-- TabletScreenGrid End -->
+                                <!-- App Button Box Start -->
+                                <child>
+                                  <object class="GtkBox" id="appbuttons_box">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="margin_left">20</property>
+                                    <property name="margin_right">20</property>
+                                    <property name="margin_top">10</property>
+                                    <property name="margin_bottom">10</property>
+                                    <property name="orientation">vertical</property>
+                                    <property name="spacing">10</property>
+                                    <property name="homogeneous">True</property>
+                                    <child>
+                                      <object class="GtkButton" id="tabletprop_pressuretest_bt">
+                                        <property name="label" translatable="yes">Pressure Test</property>
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">True</property>
+                                        <signal name="activate" handler="pressure_test" swapped="no"/>
+                                        <signal name="clicked" handler="gt" swapped="no"/>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                        <property name="position">0</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton" id="tabletprop_advsettings_bt">
+                                        <property name="label" translatable="yes">Advance Setting</property>
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">True</property>
+                                        <signal name="activate" handler="advance_settings" swapped="no"/>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                        <property name="position">1</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton" id="tabletprop_expkeysettings_bt">
+                                        <property name="label" translatable="yes">Express Keys Setting</property>
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">True</property>
+                                        <signal name="activate" handler="express_keys" swapped="no"/>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                        <property name="position">2</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton" id="tabletprop_default_bt">
+                                        <property name="label" translatable="yes">Default</property>
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">True</property>
+                                        <signal name="activate" handler="defaults_setting" swapped="no"/>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">False</property>
+                                        <property name="fill">True</property>
+                                        <property name="position">3</property>
+                                      </packing>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">1</property>
+                                  </packing>
+                                </child>
+                                <!-- App Button Box End -->
+                                <!-- Tablet Mode Grid Start -->
+                                <child>
+                                  <object class="GtkGrid" id="tabletmode_grid">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="margin_left">6</property>
+                                    <property name="margin_right">8</property>
+                                    <property name="margin_bottom">10</property>
+                                    <property name="row_spacing">6</property>
+                                    <property name="column_spacing">54</property>
+                                    <property name="row_homogeneous">True</property>
+                                    <property name="column_homogeneous">True</property>
+                                    <child>
+                                      <object class="GtkRadioButton" id="tabletscreen_lefthand">
+                                        <property name="label" translatable="yes">Left Hand Mode</property>
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">False</property>
+                                        <property name="active">True</property>
+                                        <property name="draw_indicator">True</property>
+                                        <signal name="activate" handler="lefhand" swapped="no"/>
+                                      </object>
+                                      <packing>
+                                        <property name="left_attach">0</property>
+                                        <property name="top_attach">0</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkRadioButton" id="tabletscreen_righthand">
+                                        <property name="label" translatable="yes">Right Hand Mode</property>
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">False</property>
+                                        <property name="active">False</property>
+                                        <property name="draw_indicator">True</property>
+                                        <signal name="activate" handler="righthand" swapped="no"/>
+                                      </object>
+                                      <packing>
+                                        <property name="left_attach">1</property>
+                                        <property name="top_attach">0</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton" id="tabletscreen_maxarea">
+                                        <property name="label" translatable="yes">Max Active Area</property>
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">True</property>
+                                        <signal name="activate" handler="maxarea" swapped="no"/>
+                                      </object>
+                                      <packing>
+                                        <property name="left_attach">0</property>
+                                        <property name="top_attach">1</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton" id="tabletscreen_displayratio">
+                                        <property name="label" translatable="yes">Display Ratio</property>
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">True</property>
+                                        <signal name="activate" handler="displayratio" swapped="no"/>
+                                      </object>
+                                      <packing>
+                                        <property name="left_attach">1</property>
+                                        <property name="top_attach">1</property>
+                                      </packing>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">2</property>
+                                  </packing>
+                                </child>
+                                <!-- Tablet Mode Grid End -->
+                                <!-- Main Application Buttons Start -->
+                                <child>
+                                  <object class="GtkButtonBox" id="main_appbutton_box">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="margin_left">10</property>
+                                    <property name="margin_right">10</property>
+                                    <property name="margin_top">10</property>
+                                    <property name="margin_bottom">10</property>
+                                    <property name="homogeneous">True</property>
+                                    <property name="layout_style">start</property>
+                                    <child>
+                                      <object class="GtkButton" id="tabletprop_ok_bt">
+                                        <property name="label" translatable="yes">OK</property>
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">True</property>
+                                        <property name="margin_right">10</property>
+                                        <signal name="activate" handler="app_ok" swapped="no"/>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">True</property>
+                                        <property name="fill">True</property>
+                                        <property name="position">0</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton" id="tabletprop_cancel_bt">
+                                        <property name="label" translatable="yes">Cancel</property>
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">True</property>
+                                        <property name="margin_right">10</property>
+                                        <signal name="activate" handler="app_cancel" swapped="no"/>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">True</property>
+                                        <property name="fill">True</property>
+                                        <property name="position">1</property>
+                                      </packing>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton" id="tabletprop_apply_bt">
+                                        <property name="label" translatable="yes">Apply</property>
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="receives_default">True</property>
+                                        <signal name="activate" handler="app_apply" swapped="no"/>
+                                      </object>
+                                      <packing>
+                                        <property name="expand">True</property>
+                                        <property name="fill">True</property>
+                                        <property name="position">2</property>
+                                      </packing>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">2</property>
+                                  </packing>
+                                </child>
+                                <!-- Main Application Buttons End -->
+                            </object>
+                        </child>
+
+
+                        <child type="label">
+                          <object class="GtkLabel" id="penfuncsettings_label">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="margin_left">14</property>
+                            <property name="margin_top">19</property>
+                            <property name="label" translatable="yes">Pen Functions Setting</property>
+                            <property name="track_visited_links">False</property>
+                          </object>
+                        </child>
+                    </object>
+                    <packing>
+                        <property name="expand">True</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
+                    </packing>
+                </child>
+                <!-- Pen Function Settings Frame End -->
+                <child>
+                  <placeholder/>
+                </child>
+
+              </object>
+            </child>
+            <!-- App Status Grid Start -->
+            <child>
+              <object class="GtkGrid" id="appstatus_grid">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkLabel" id="appstatus_label">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="margin_left">378</property>
+                    <property name="margin_top">5</property>
+                    <property name="margin_bottom">5</property>
+                    <property name="label" translatable="yes">Ver: 0.1</property>
+                    <property name="justify">right</property>
+                    <property name="track_visited_links">False</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">1</property>
+                    <property name="top_attach">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="appcopy_label">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="margin_left">11</property>
+                    <property name="margin_right">21</property>
+                    <property name="margin_top">5</property>
+                    <property name="margin_bottom">5</property>
+                    <property name="label" translatable="yes">CopyLeft 2018 Design Tablets</property>
+                  </object>
+                  <packing>
+                    <property name="left_attach">0</property>
+                    <property name="top_attach">0</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="pack_type">end</property>
+                <property name="position">5</property>
+              </packing>
+            </child>
+            <!-- App Status Grid End -->
+            <!-- Main Application Grid End -->
+        </object>
+    </child>
+    <!-- Main Application Box End -->
+  </template>
+</interface>
