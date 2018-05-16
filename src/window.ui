@@ -1,6 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk+" version="3.20"/>
+  <!-- interface-local-resource-path /designtablets/src -->
+  <!-- interface-license-type gplv3 -->
+  <!-- interface-name Design Tablets -->
+  <!-- interface-authors Rey Angeles -->
+  <object class="GtkImage" id="image1">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">settings.png</property>
+  </object>
+  <object class="GtkImage" id="image2">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">settings2.png</property>
+  </object>
+  <object class="GtkImage" id="image3">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">more.png</property>
+  </object>
+  <object class="GtkImage" id="image4">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">less.png</property>
+  </object>
+  <object class="GtkImage" id="image5">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">default.png</property>
+  </object>
+  <object class="GtkImage" id="image6">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">more.png</property>
+  </object>
+  <object class="GtkImage" id="image7">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">less.png</property>
+  </object>
+  <object class="GtkImage" id="image8">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">settings3.png</property>
+  </object>
+  <object class="GtkImage" id="image9">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">settings4.png</property>
+  </object>
+  <object class="GtkImage" id="image10">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">updscreen.png</property>
+  </object>
+  <object class="GtkImage" id="image11">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">maxarea.png</property>
+  </object>
+  <object class="GtkImage" id="image12">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">pressure.png</property>
+  </object>
+  <object class="GtkImage" id="image13">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">advsettings.png</property>
+  </object>
+  <object class="GtkImage" id="image14">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">keys.png</property>
+  </object>
+  <object class="GtkImage" id="image15">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">default.png</property>
+  </object>
+  <object class="GtkImage" id="image16">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">displayratio.png</property>
+  </object>
   <template class="DesigntabletsWindow" parent="GtkApplicationWindow">
     <property name="default-width">600</property>
     <property name="default-height">510</property>
@@ -133,7 +217,7 @@
                   <object class="GtkImage" id="default_image">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="pixbuf">src/tablet_default.svg</property>
+                    <property name="pixbuf">tablet_default.png</property>
                   </object>
                   <packing>
                     <property name="left_attach">0</property>
@@ -262,7 +346,8 @@
                                         <property name="margin_right">20</property>
                                         <property name="margin_top">10</property>
                                         <property name="margin_bottom">10</property>
-                                        <property name="size">button</property>
+					<property name="image">image8</property>
+                        		<property name="always_show_image">True</property>
                                         <child internal-child="plus_button">
                                           <object class="GtkButton">
                                             <property name="label" translatable="yes">Heavy</property>
@@ -271,6 +356,8 @@
                                             <property name="halign">center</property>
                                             <property name="valign">center</property>
                                             <property name="relief">none</property>
+				            <property name="image">image3</property>
+                        		    <property name="always_show_image">True</property>
                                           </object>
                                         </child>
                                         <child internal-child="minus_button">
@@ -281,6 +368,8 @@
                                             <property name="halign">center</property>
                                             <property name="valign">center</property>
                                             <property name="relief">none</property>
+					    <property name="image">image4</property>
+                        		    <property name="always_show_image">True</property>
                                           </object>
                                         </child>
                                       </object>
@@ -299,8 +388,9 @@
                                         <property name="margin_right">20</property>
                                         <property name="margin_top">10</property>
                                         <property name="margin_bottom">10</property>
-                                        <property name="relief">none</property>
                                         <property name="orientation">vertical</property>
+					<property name="image">image9</property>
+                        		<property name="always_show_image">True</property>
                                         <child internal-child="plus_button">
                                           <object class="GtkButton">
                                             <property name="label" translatable="yes">Fast</property>
@@ -309,6 +399,8 @@
                                             <property name="halign">center</property>
                                             <property name="valign">center</property>
                                             <property name="relief">none</property>
+					    <property name="image">image6</property>
+                        		    <property name="always_show_image">True</property>
                                           </object>
                                         </child>
                                         <child internal-child="minus_button">
@@ -319,6 +411,8 @@
                                             <property name="halign">center</property>
                                             <property name="valign">center</property>
                                             <property name="relief">none</property>
+				            <property name="image">image7</property>
+                        		    <property name="always_show_image">True</property>
                                           </object>
                                         </child>
                                       </object>
@@ -355,6 +449,8 @@
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">True</property>
+					<property name="image">image5</property>
+                        		<property name="always_show_image">True</property>
                                       </object>
                                       <packing>
                                         <property name="left_attach">0</property>
@@ -398,9 +494,9 @@
                                                     <property name="can_focus">False</property>
                                                     <property name="active_id">1</property>
                                                     <items>
-                                                      <item id="1" translatable="yes">Monitor1</item>
-                                                      <item id="2" translatable="yes">Monitor2</item>
-                                                      <item id="3" translatable="yes">Monitor3</item>
+                                                      <item id="1" translatable="yes">Display 1</item>
+                                                      <item id="2" translatable="yes">Display 2</item>
+                                                      <item id="3" translatable="yes">Display 3</item>
                                                     </items>
                                                   </object>
                                                   <packing>
@@ -416,6 +512,8 @@
                                                     <property name="receives_default">True</property>
                                                     <property name="margin_left">20</property>
                                                     <property name="margin_right">20</property>
+						    <property name="image">image10</property>
+                        		            <property name="always_show_image">True</property>
                                                     <signal name="activate" handler="update_screen" swapped="no"/>
                                                   </object>
                                                   <packing>
@@ -593,6 +691,8 @@
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">True</property>
+					<property name="image">image12</property>
+                        		<property name="always_show_image">True</property>
                                         <signal name="activate" handler="pressure_test" swapped="no"/>
                                         <signal name="clicked" handler="gt" swapped="no"/>
                                       </object>
@@ -608,6 +708,8 @@
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">True</property>
+					<property name="image">image13</property>
+                        		<property name="always_show_image">True</property>
                                         <signal name="activate" handler="advance_settings" swapped="no"/>
                                       </object>
                                       <packing>
@@ -622,6 +724,8 @@
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">True</property>
+					<property name="image">image14</property>
+                        		<property name="always_show_image">True</property>
                                         <signal name="activate" handler="express_keys" swapped="no"/>
                                       </object>
                                       <packing>
@@ -636,6 +740,8 @@
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">True</property>
+					<property name="image">image15</property>
+                        		<property name="always_show_image">True</property>
                                         <signal name="activate" handler="defaults_setting" swapped="no"/>
                                       </object>
                                       <packing>
@@ -699,6 +805,8 @@
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">True</property>
+					<property name="image">image11</property>
+                        		<property name="always_show_image">True</property>
                                         <signal name="activate" handler="maxarea" swapped="no"/>
                                       </object>
                                       <packing>
@@ -712,6 +820,8 @@
                                         <property name="visible">True</property>
                                         <property name="can_focus">True</property>
                                         <property name="receives_default">True</property>
+					<property name="image">image16</property>
+                        		<property name="always_show_image">True</property>
                                         <signal name="activate" handler="displayratio" swapped="no"/>
                                       </object>
                                       <packing>

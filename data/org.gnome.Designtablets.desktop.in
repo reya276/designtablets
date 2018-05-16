@@ -1,7 +1,11 @@
 [Desktop Entry]
-Name=designtablets
-Exec=designtablets
+Name=Hello Again
+GenericName=Design Tablets App
+Comment=An app designed for NON Wacom Tablets
+Categories=Utility;Education;
+Exec=com.github.reya276.designtablets
+Icon=application-default-icon
 Terminal=false
 Type=Application
-Categories=GTK;
-StartupNotify=true
+X-GNOME-Gettext-Domain=design-tablets
+Keywords=Design;Graphics;Tablets;
